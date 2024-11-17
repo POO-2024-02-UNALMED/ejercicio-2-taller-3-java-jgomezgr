@@ -2,30 +2,30 @@ package compras;
 
 public class Producto {
     
-    ** final int codigo;
-    ** String nombre;
-    ** String tipo;
-    ** static int totalProductosPedidos;
+    private int codigo; //Se debia eliminar el "final" ya que en el metodo setCodigo() se esta modificando y el final no nos lo permitía
+    private String nombre;
+    String tipo;
+    static int totalProductosPedidos;
 
-    ** Producto(int codigo, String nombre, String tipo) {
+    public Producto(int codigo, String nombre, String tipo) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.tipo = tipo;
     }
 
-    ** void imprimirNombre() {
+    public void imprimirNombre() {
         System.out.print(nombre);
     }
 
     public void setCodigo(int codigo) {
-        **
+        this.codigo = codigo;
     }
 
-    public ** getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    ** static int getTotalProductosPedidos() {
+    public static int getTotalProductosPedidos() {
         return totalProductosPedidos;
     }
 }
